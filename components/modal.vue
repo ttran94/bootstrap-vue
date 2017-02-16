@@ -1,7 +1,7 @@
 <template>
   <div style="display: none">
     <div :id="id"
-         :class="{ modal:true,fade: fade, show: animateModal || !fade }"
+         :class="{ modal:true,fade: fade, in: animateModal || !fade }"
          style="display: block"
          @click="onClickOut($event)">
       <div :class="['modal-dialog','modal-'+size]" role="document" style="z-index: 9999">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="modal-backdrop" :class="{ fade: fade, show: animateBackdrop || !fade }"></div>
+    <div class="modal-backdrop" :class="{ fade: fade, in: animateBackdrop || !fade }"></div>
   </div>
 </template>
 
